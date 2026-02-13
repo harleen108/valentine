@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+<style>
+body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    font-family: Arial;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 35px;
+    color: white;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#noBtn {
+    background-color: white;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Will You Be My Valentine? 💕</h1>
+
+<button id="yesBtn" onclick="yesClicked()">Yes 😍</button>
+<button id="noBtn" onmouseover="moveButton()">No 😭</button>
+
+<script>
+function yesClicked() {
+    document.body.innerHTML = "<h1>YAYYY ❤️ You Are Mine Forever 🥰</h1>";
+}
+
+function moveButton() {
+    var x = Math.random() * window.innerWidth;
+    var y = Math.random() * window.innerHeight;
+    document.getElementById("noBtn").style.left = x + "px";
+    document.getElementById("noBtn").style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
